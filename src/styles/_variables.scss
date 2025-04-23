@@ -7,6 +7,8 @@ $gold: #FFD700;
 $blue: #0033A0;
 $silver: #C0C0C0;
 $white: #FFFFFF;
+$cardBlack: #222222;
+$glass: #272727d8;
 
 // FONT FAMILY
 $font: 'Poppins', sans-serif;
@@ -28,3 +30,6 @@ $fw-bold: 700;
 $lh-tight: 1.1;
 $lh-normal: 1.4;
 $lh-loose: 1.6;
+
+//BLUR EFECT
+$blur: blur(15px) saturate(150%);

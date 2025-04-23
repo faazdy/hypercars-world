@@ -1,0 +1,65 @@
+@use "./variables" as *;
+
+.brand-cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 10px;
+    padding: 1em 2.5em;
+}
+.brand-card{
+    background-color: $cardBlack;
+    border-radius: 5px;
+    overflow: hidden;
+    .car-img {
+        width: 100%;
+    }
+    .car-img img{
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .logo{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $cardBlack;
+        .img{
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            transform: translateY(-40px);
+            padding: 1.2em;
+            background-color: $cardBlack;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .img img{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .info{
+        padding: 1em;
+        color: $white;
+        h3{font-size: calc($fs-subtitle - 5px); font-weight: $fw-regular;}
+        p{color: $silver;}
+        a{
+            display: inline-block;
+            padding: .5em;
+            text-decoration: none;
+            border: 1px solid $red;
+            color: $red;
+            margin: 1em 0;
+
+            &:hover{
+                background-color: $red;
+                color: $white;
+            }
+        }
+    }
+}
