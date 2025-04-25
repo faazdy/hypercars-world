@@ -1,0 +1,39 @@
+.loader{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    color: rgba(248, 248, 248, 0.637);
+    animation: translate .5s ease-in-out;
+    animation-delay: 1s;
+    img{
+        margin: 1em auto;
+        width: 50px;
+        animation: loading 1s ease infinite;
+        transition: all .3s ease;
+    }
+    strong{
+        font-size: 1rem;
+    }
+}
+
+@keyframes loading {
+    from{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes translate {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-5000px);
+    }
+}
