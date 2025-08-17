@@ -76,6 +76,10 @@ section,
     background-color: red;
 }
 
+.carousel-item img {
+  height: 100vh;
+  object-fit: cover;
+}
 
 .comparison-section {
     padding: 4rem 2rem;
@@ -95,48 +99,65 @@ section,
       margin-top: 2rem;
     }
   
-    .comparison-card {
-      background-color: $cardBlack2;
-      border-radius: 1rem;
+    
+  }
+
+.gallery-section{
+    text-align: center;
+    .gallery-videos{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 5rem;
+        iframe{
+          width: 100%;
+        }
+    }
+    .video-card{
+      background-color: $cardBlack;
+      border-radius: 5px;
       overflow: hidden;
       box-shadow: 0 0 20px rgba(255,255,255,0.05);
-      transition: transform 0.3s ease;
-  
-      .car-img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-      }
-  
-      .car-info {
+      
+      .video-card-text{
         padding: 1rem;
-        text-align: left;
-  
-        h3 {
-          font-size: 1.4rem;
-          margin-bottom: 0.5rem;
+        color: $silver;
+        h5{
+          transition: 0.3s ease;
+            margin-bottom: 0.5rem;
         }
-  
-        p {
-          margin: 0.2rem 0;
-          font-size: 0.9rem;
+        p{
+            font-size: $fs-body;
+            margin-bottom: 0.5rem;
         }
-  
-        .compare-btn {
-          margin-top: 0.8rem;
-          padding: 0.5rem 1rem;
-          background: $red;
-          border: none;
-          color: white;
-          border-radius: 0.5rem;
-          cursor: pointer;
-          transition: background 0.3s;
-  
-          &:hover {
-            background: #ff2e63;
-          }
+      }
+
+      &:hover{
+        h5{
+            color: $gold;
         }
       }
     }
-  }
-  
+}
+
+footer{
+    background-color: $black2;
+    color: $silver;
+    padding: 2rem 0;
+    text-align: center;
+
+    p{
+        margin: 0.5rem 0;
+        font-size: $fs-small;
+    }
+
+    a{
+        color: $gold;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

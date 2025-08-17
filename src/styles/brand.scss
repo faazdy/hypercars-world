@@ -28,7 +28,7 @@
         background-color: $cardBlack;
         .img{
             width: 150px;
-            height: 150px;
+            object-fit: cover;
             display: flex;
             justify-content: center;
             transform: translateY(-40px);
@@ -63,3 +63,4 @@
         }
     }
 }
+

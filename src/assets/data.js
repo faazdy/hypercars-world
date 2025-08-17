@@ -44,17 +44,17 @@ export const featuredCars = [
     {
         id: uuid(),
         carName: "Lamborghini Revuelto",
-        image: "https://news.dupontregistry.com/wp-content/uploads/2024/12/DSC06323-scaled.jpg"
+        image: "https://www.hdwallpapers.in/download/white_lamborghini_revuelto_car_4k_5k_hd_cars-5120x2880.jpg"
     },
     {
         id: uuid(),
         carName: "Bugatti Chiron Super Sport",
-        image: "https://cdn.motor1.com/images/mgl/7qRPJ/s1/bugatti-chiron-super-sport-300-first-batch.webp"
+        image: "https://images.hdqwalls.com/wallpapers/bugatti-chiron-rear-4k-8p.jpg"
     },
     {
         id: uuid(),
         carName: "McLaren P1",
-        image: "https://mclaren.scene7.com/is/image/mclaren/McLaren-P1-Hero-1920x1080:crop-16x9?wid=1920&hei=1080"
+        image: "https://images.unsplash.com/photo-1592199299806-e7349699f6a9?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWNsYXJlbiUyMHAxfGVufDB8fDB8fHww"
     }
 ];
 

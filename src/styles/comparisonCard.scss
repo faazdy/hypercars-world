@@ -1,0 +1,155 @@
+@use "./variables" as *;
+
+/*card*/
+.comparison-card {
+    background-color: $cardBlack2;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+
+    .car-img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .car-info {
+        padding: 1rem;
+        text-align: left;
+
+        h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin: 0.2rem 0;
+            font-size: 0.9rem;
+        }
+
+        .compare-btn {
+            margin-top: 0.8rem;
+            padding: 0.5rem 1rem;
+            background: $red;
+            border: none;
+            color: white;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            &:hover {
+                background: #ff2e63;
+            }
+        }
+    }
+}
+
+
+/*MODAL COMPARISON CARD*/
+.modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-in-out;
+
+    .modal-content {
+        width: 60%;
+        background: linear-gradient(135deg, $cardBlack 0%, $black2 100%);
+        border-radius: 15px;
+        position: relative;
+        color: $white;
+
+        .modal-header {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0.5em 1em;
+            border-color: rgba(255, 255, 255, 0.048);
+
+            button {
+                background: linear-gradient(135deg, $black2 0%, darken($black2, 10%) 100%);
+                border: none;
+                color: $white;
+                font-size: 1.5em;
+                cursor: pointer;
+                padding: 0.5em 1em;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: linear-gradient(135deg, $red 0%, darken($red, 10%) 100%);
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        .modal-main {
+            padding: 1em;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+        }
+
+        h1 {
+            background: linear-gradient(90deg, $gold, lighten($gold, 15%));
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1em;
+            padding: 0 1em;
+        }
+
+        ul {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            li {
+                font-size: $fw-regular;
+                margin-bottom: 0.8em;
+
+                strong {
+                    font-weight: bold;
+                    color: $gold;
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 1em;
+            transition: transform 0.3s ease;
+        }
+    }
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .modal .modal-content {
+        width: 90%;
+
+        .modal-main {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
